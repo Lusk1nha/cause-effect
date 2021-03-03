@@ -16,17 +16,16 @@ function openAndFold() {
   const person = this
   const personInfos = person.childNodes[1]
 
-  // persons.forEach(person => {
-  //   person.classList.remove('active')
-  //   person.childNodes[1].hidden = true
+  persons.forEach(person => {
+    person.classList.remove('active')
+    person.childNodes[1].hidden = true
 
-  // })
+  })
 
   person.classList.toggle('active')
 
   if (personInfos.hidden) return personInfos.hidden = false
   return personInfos.hidden = true
-
 }
 
 function renderContent(persons) {
